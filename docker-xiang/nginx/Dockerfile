@@ -1,4 +1,5 @@
 FROM nginx:latest
-COPY ./site/test.conf /etc/nginx/conf.d/
+COPY ./upstream.conf /etc/nginx/conf.d/
+COPY ./nginx.conf /etc/nginx/
 RUN adduser -D -H -u 82 -s /bin/sh nginx
-
+WORKDIR /etc/nginx
