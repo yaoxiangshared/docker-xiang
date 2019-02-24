@@ -2,6 +2,7 @@
 docker build -t nginx:v1 .
 
 docker run -d --name php-fpm --network my-net --mount type=bind,source=E:/work/workspace/docker-xiang/docker-xiang/php,target=/usr/local/etc/php-fpm.d --mount type=bind,source=E:/work/workspace/project/php,target=/var/www/test alipeng/php7-fpm-alpine 
+
 docker run -d --name nginx -p 8080:80 --network my-net  --mount type=bind,source=E:/work/workspace/docker-xiang/docker-xiang/nginx/site,target=/etc/nginx/conf.d/site --mount type=bind,source=E:/work/workspace/project/php,target=/var/www/test nginx:v1 
 
 
