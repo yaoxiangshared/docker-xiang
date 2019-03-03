@@ -7,4 +7,9 @@ docker run -d --name nginx -p 8080:80 --network my-net  --mount type=bind,source
 
 
 docker run -it  --network my-net alipeng/php7-fpm-alpine  sh
-```
+
+
+docker run -it --mount type=bind,source=/data/project/hexo,target=/data/project/hexo node
+
+
+docker run -d --name nginx -p 8080:80 --network my-net  --mount type=bind,source=/data/project/docker-xiang/docker-xiang/nginx/site,target=/etc/nginx/conf.d/site --mount type=bind,source=/data/project,target=/var/www nginx:v1 
