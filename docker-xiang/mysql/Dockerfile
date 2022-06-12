@@ -1,7 +1,6 @@
-ARG MYSQL_VERSION=5.6
+ARG MYSQL_VERSION=8.0
 FROM mysql:${MYSQL_VERSION}
 
-LABEL maintainer Alipeng <lipeng.yang@mobvista.com>
 
 #####################################
 # Set Timezone
