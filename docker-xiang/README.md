@@ -22,4 +22,6 @@ docker run -d --name php-fpm --network my-net --mount type=bind,source=/data/pro
 docker run -d --name nginx -p 80:80 --network my-net  --mount type=bind,source=/data/project/docker-xiang/docker-xiang/nginx/site,target=/etc/nginx/conf.d/site --mount type=bind,source=/data/project,target=/var/www  --mount type=bind,source=/usr/local/log,target=/var/log nginx:v1 
 
 
+docker build -t tally-portal-qa:latest .
+
 docker network create -d bridge my-net
