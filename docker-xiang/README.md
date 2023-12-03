@@ -28,3 +28,4 @@ docker network create -d bridge my-net
 
 
 docker run -d  --name tally-portal-qa  --network my-net  --mount type=bind,source=/data/project/tally_portal_qa/nohup.log,target=/app/nohup.log  --mount type=bind,source=/data/project/tally_portal_qa/resource/,target=/app/resource/ tally-portal-qa
+docker run -d  --name tally-redis  --network my-net   redis-server
